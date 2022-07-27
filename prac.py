@@ -67,5 +67,14 @@ def sumofdigits():
     for i in a:
         s += int(i)
     print(s)
-sumofdigits()
+
+def sum_of_series():
+    x = int(input("enter number: "))
+    s = 1
+    for i in range(21):
+        s += (x ** 1)
+    print(s)
+
+
+
 
