@@ -1,3 +1,10 @@
+#helper function
+def factorial(x):
+    a = 1
+    for i in range(1,x+1):
+        a *= i
+    return a
+#question functions
 def average():
     numbers = []
     i = 0
@@ -37,6 +44,13 @@ def cube():
         print(cube_of_x)
         i += 1 
 
+def factorial_q():
+    x = int(input("enter number: "))
+    a = 1
+    for i in range(1,x+1):
+        a *= i
+    print(a)
+
 def series():
     y = int(input("enter number of elements: "))
     j = 2
@@ -54,13 +68,6 @@ def multiply():
     for i in range(10+1):
         print(f"{x} X {i} = {x * i}")
 
-def factorial():
-    x = int(input("enter number: "))
-    a = 1
-    for i in range(1,x+1):
-        a *= i
-    print(a)
-
 def sumofdigits():
     a = input("enter number: ")
     s = 0
@@ -75,6 +82,68 @@ def sum_of_series():
         s += (x ** 1)
     print(s)
 
+def ss2():
+    x = int(input("enter number: "))
+    s = 1
+    for i in range(21):
+        s += (x ** i) / factorial(i)
+    print(s)
+
+def ss3():
+    x = int(input("enter number: "))
+    s = 1
+    for i in range(1,21,2):
+        for j in range(1,21):
+            s += (x ** i) / factorial(j)
+    print(s)
+
+def ss5():
+    x = int(input("enter number: "))
+    s = x
+    for i in range(0,21,2):
+        for j in range(21):
+            if j % 2 == 0:
+                s += (x ** i) / factorial(i)
+            else:
+                s -= (x ** i) / factorial(i)
+    print(f"sin({x}): {s}")
+
+def ss6():
+    for i in range(11):
+        print(factorial(i))
+
+def ss7():
+    for i in range(5):
+        for j in range(i):
+            print(str(j) * j, end="\n")
+
+def ss8():
+    for i in range(5,-1):
+        for j in range(i):
+            print(str(j) * j, end="\n")
+
+def ss9():
+    for i in range(11):
+        print(f"{i}: ", end="")
+        for j in range(11):
+            print(f"{i * j}", end=" ")
+        print("\n")
+
+def ss10():
+    for i in range(0, 4):
+        for j in range(i+1):
+            print('*', end="")
+        print("\r")
+    for x in range(4,0,-1):
+        for j in range(x):
+            print('*', end="")
+        print("\r")
 
 
-
+def ss11():
+    x = int(input("enter number: "))
+    s = 1
+    s -= (x ** 2) / factorial(2)
+    for i in range(4,21,2):
+        s += (x ** i) / factorial(i)
+    print(s)
