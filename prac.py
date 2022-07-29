@@ -147,3 +147,41 @@ def ss11():
     for i in range(4,21,2):
         s += (x ** i) / factorial(i)
     print(s)
+
+def menu():
+    choice = int(input("""
+            AREA CALCULATOR
+        1) Area of triangle
+        2) Area of circle
+        3) Area of rectangle
+
+        enter choice from above menu: """))
+    
+    if choice not in range(1,3):
+        print("choice not in menu\nGoodBye....")
+        quit()
+    con = 'y'
+    while con == 'y':
+        if choice == 1:
+            b = int(input("enter base: "))
+            h = int(input("enter height: "))
+            area = 0.5 * b * h
+            print(f"area of triangle: {area}")
+            con = input("enter y to continue: ").lower()
+            if con == 'y':
+                menu()
+        if choice == 2:
+            r = int(input("enter radius: "))
+            area = 3.14 * r ** 2
+            print(f"area of circle: {area}")
+            con = input("enter y to continue: ").lower()
+            if con == 'y':
+                menu()
+        if choice == 3:
+            l = int(input("enter length: "))
+            b = int(input("enter breadth: "))
+            area = l * b
+            print(f"area of rectangle: {area}")
+            con = input("enter y to continue: ").lower()
+            if con == 'y':
+                menu()
