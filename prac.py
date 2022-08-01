@@ -75,21 +75,21 @@ def sumofdigits():
         s += int(i)
     print(s)
 
-def sum_of_series():
+def july_28_00():
     x = int(input("enter number: "))
     s = 1
     for i in range(21):
         s += (x ** 1)
     print(s)
 
-def ss2():
+def july_28_01():
     x = int(input("enter number: "))
     s = 1
     for i in range(21):
         s += (x ** i) / factorial(i)
     print(s)
 
-def ss3():
+def july_28_02():
     x = int(input("enter number: "))
     s = 1
     for i in range(1,21,2):
@@ -97,7 +97,7 @@ def ss3():
             s += (x ** i) / factorial(j)
     print(s)
 
-def ss5():
+def july_28_03():
     x = int(input("enter number: "))
     s = x
     for i in range(0,21,2):
@@ -108,28 +108,28 @@ def ss5():
                 s -= (x ** i) / factorial(i)
     print(f"sin({x}): {s}")
 
-def ss6():
+def july_28_04():
     for i in range(11):
         print(factorial(i))
 
-def ss7():
+def july_28_05():
     for i in range(5):
         for j in range(i):
             print(str(j) * j, end="\n")
 
-def ss8():
+def july_28_06():
     for i in range(5,-1):
         for j in range(i):
             print(str(j) * j, end="\n")
 
-def ss9():
+def july_28_07():
     for i in range(11):
         print(f"{i}: ", end="")
         for j in range(11):
             print(f"{i * j}", end=" ")
         print("\n")
 
-def ss10():
+def july_28_08():
     for i in range(0, 4):
         for j in range(i+1):
             print('*', end="")
@@ -140,7 +140,7 @@ def ss10():
         print("\r")
 
 
-def ss11():
+def july_28_09():
     x = int(input("enter number: "))
     s = 1
     s -= (x ** 2) / factorial(2)
@@ -148,7 +148,7 @@ def ss11():
         s += (x ** i) / factorial(i)
     print(s)
 
-def menu():
+def july_29():
     choice = int(input("""
             AREA CALCULATOR
         1) Area of triangle
