@@ -89,13 +89,16 @@ def july_28_01():
         s += (x ** i) / factorial(i)
     print(s)
 
-def july_28_02():
-    x = int(input("enter number: "))
-    s = 1
-    for i in range(1,21,2):
-        for j in range(1,21):
-            s += (x ** i) / factorial(j)
-    print(s)
+def july_28_02(x,n):
+   total = 1
+   nu = 1
+   for i in range(1, n+1):
+    a = x ** nu
+    nu += 2
+    b = factorial(i)
+    total += (a / b)
+print(total)
+
 
 def july_28_03():
     x = int(input("enter number: "))
@@ -234,3 +237,5 @@ def AUG_4_2022_04():
         a = a*10 + digit
     print(b)
     print(a)
+
+july_28_02()
