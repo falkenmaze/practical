@@ -185,3 +185,52 @@ def july_29():
             con = input("enter y to continue: ").lower()
             if con == 'y':
                 menu()
+
+def AUG_4_2022_01():
+    num = int(input("enter number: "))
+    n = str(num)
+    s = 0
+    for i in n:
+        s += 1
+    print(f"number of digits in {num}: {s}")
+
+def AUG_4_2022_02():
+   x = int(input("What is the number?"))
+   a = 0
+   b = x
+   while x!=0:
+    digit = x%10
+    x = x//10
+    a = a+digit**3
+    print(a)
+    print(b)
+    if a == b:
+        print("It is an armstrong number")
+    elif a!=b:
+        print("It is not an armstrong number")
+
+def AUG_4_2022_03():
+    x = int(input("What is the number?"))
+    a = 0
+    b = x
+    while x != 0:
+        digit = x%10
+        x = x//10
+        a = a*10 + digit
+    print(b)
+    print(a)
+    if a == b:
+        print("It is a palindrome")
+    elif a!=b:
+        print("It is not a palindrome")
+
+def AUG_4_2022_04():
+    x = int(input("What is the number?"))
+    a = 0
+    b = x
+    while x != 0:
+        digit = x%10
+        x = x//10
+        a = a*10 + digit
+    print(b)
+    print(a)
