@@ -97,7 +97,7 @@ def july_28_02(x,n):
     nu += 2
     b = factorial(i)
     total += (a / b)
-print(total)
+    print(total)
 
 
 def july_28_03():
@@ -238,4 +238,32 @@ def AUG_4_2022_04():
     print(b)
     print(a)
 
-july_28_02()
+def AUG_16_01():
+    string = input("enter string: ")
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    c = 0
+    for i in string:
+        if i.lower() in vowels:
+            c+=1
+    print(c)
+
+def AUG_16_02():
+    string = input('enter string: ')
+    c_upper = 0
+    c_lower = 0
+    c_digit = 0
+    c_space = 0
+    for i in string: 
+        if i.isupper():
+            c_upper+=1
+        elif i.islower():
+            c_lower += 1
+        if i.isdigit():
+            c_digit += 1
+        if i.isspace():
+            c_space += 1
+    print(f"upper: {c_upper}\nlower: {c_lower}\ndigit: {c_digit}\nspace: {c_space}")
+
+def AUG_16_03():
+    string = input('enter string: ')
+    print(string[-1]+string[1:-1]+string[0])
