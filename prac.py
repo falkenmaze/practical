@@ -267,3 +267,97 @@ def AUG_16_02():
 def AUG_16_03():
     string = input('enter string: ')
     print(string[-1]+string[1:-1]+string[0])
+
+def AUG_16_04():
+    string = input('enter string: ')
+    nstr = ""
+    for i in string:
+        nstr = i + nstr
+    print(nstr)
+
+def AUG_16_05():
+    string = input('enter string: ')
+    print(string[1:] + string[0])
+
+def AUG_16_06():
+    string = input("enter string: ")
+    nstring = string[0] + "."
+    for i in range(len(string) - 1):
+        if string[i].isspace():
+            nstring += string[i + 1] + "."
+    print(nstring)
+
+def AUG_16_07():
+    string = input("enter string: ").lower()
+    nstring = string[::-1]
+    if string == nstring:
+        print("it is a palindrome")
+    else:
+        print("not a palindrome")
+
+def AUG_16_08():
+    string = input("enter string: ")
+    for i in range(len(string)):
+        print(string[i:] + string[:i])
+
+def AUG_16_09():
+    x = "y"
+    while x == "y":
+        u = 0
+        l = 0
+        d = 0
+        c = 0
+        s = input("enter password: ")
+        for i in s:
+            if i.isupper():
+                u += 1
+            elif i.islower():
+                l += 1
+            elif i.isdigit():
+                d += 0
+            if len(s) < 8:
+                print("password must contain 8 chars")
+                c+= 1
+            if u == 0:
+                print("password must have 1 uppercase char")
+                c += 1
+            if l == 0:
+                print("password must have 1 lowercase char")
+                c += 1
+            if d == 0:
+                print("password must have 1 digit")
+                c += 1
+            if c == 0:
+                x = input("to change ur password: type y")
+
+def AUG_17_01():
+    li = []
+    su = 0
+    for i in range(10):
+        x = int(input("enter number: "))
+        li.append(x)
+    for y in li:
+        if y % 2 == 0:
+            su += y
+    print(su)
+
+def AUG_17_02():
+    li = []
+    for i in range(10):
+        x = int(input("ENTER NUMBER: "))
+        li.append(x)
+    li2 = li[::-1]
+    print(li2)
+
+def AUG_17_03():
+    li = []
+    for i in range(10):
+        x = int(input("enter number: "))
+        li.append(x)
+    li2 = []
+    for y in li:
+        if y % 2 == 0:
+            li2.append(y // 2)
+        else:
+            li2.append(y * 2)
+    print(li2)
