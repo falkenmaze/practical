@@ -361,3 +361,37 @@ def AUG_17_03():
         else:
             li2.append(y * 2)
     print(li2)
+
+def AUG_17_04():
+    li = []
+    for i in range(10):
+        x = int(input("enter number: "))
+        li.append(x)
+    su = 0
+    for i in li:
+        su += i**2
+    print(su)
+
+def AUG_17_05():
+    li = []
+    for i in range(7):
+        x = int(input("enter number"))
+        li.append(x)
+    nli = li[::-1]
+    print(nli)
+
+def AUG_17_06():
+    li1 = []
+    li2 = []
+    for i in range(5):
+        x = int(input("enter number: "))
+        li1.append(x)
+    for i in range(5):
+        x = int(input("enter number: "))
+        li2.append(x)
+    nli = []
+    for i in range(len(li1)):
+        nli.append(li1[i])
+        nli.append(li2[i])
+    print(nli)
+AUG_17_06()
