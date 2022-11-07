@@ -394,4 +394,92 @@ def AUG_17_06():
         nli.append(li1[i])
         nli.append(li2[i])
     print(nli)
-AUG_17_06()
+
+def nov_4_2022_q1():
+    dictionary = {}
+    while True:
+        ch = int(input("1.Add to dictionary\n2.Display Elements\n3.Exit\n"))
+        if ch == 1:
+            x = int(input("enter number: "))
+            y = (x ** 2), (x ** 3)
+            dictionary.update({x: y})
+        elif ch == 2:
+            print(dictionary.items())
+        elif ch == 3:
+            quit()
+        else:
+            print("invalid choice")
+
+def nov_4_2022_q2():
+    d = {}
+    while True:
+        ch = int(input("1.Add to dictionary\n2.Display Elements\n3.Exit\n"))
+        if ch == 1:
+            x = input("enter itemcode: ")
+            y = input("enter price: ")
+            d.update({x: y})
+        elif ch == 2:
+            x = int(input("1.on the basis of code\n2.on the basis of price\n"))
+            if x == 1:
+                print(d.items())
+            elif x == 2:
+                value = int(input("enter price: "))
+                for i in d.items():
+                    for j in i:
+                        if j == value:
+                            sub = i
+                            print(f"{sub[0]}, {value}")
+        elif ch == 3:
+            quit()
+        else:
+            print("invalid choice")
+
+def helper():
+    s = 0
+    for i in value:
+        s += i
+    dictionary.update({key: (s/5)})
+
+def nov_4_2022_q3():
+    d = {}
+    d2 = {}
+    while True:
+        c = int(input("1.Add to dictioanry\n2.Display Elements\n3.remove from dictionary\n4.update dictionary\n5.exit\n=>"))
+        if c == 1:
+            name = input("enter ur name: ")
+            li = []
+            for i in range(5):
+                y = int(input(f"enter marks {i}: "))
+                li.append(y)
+            d.update({name:li})
+            helper(name, li, d2)
+        elif c == 2:
+            x = int(input("1.On the basis of Name\n2.On the basis of percentage\n3.On the basis of highest percentage\n"))
+            if x == 1:
+                na = input("enter the name to search: ")
+                for i in d.items():
+                    if i[0] == na:
+                        print(i)
+            elif x == 2:
+                per = int(input("enter percentage: "))
+                for i in d2.items():
+                    if i[1] == per:
+                        print(i)
+            elif x == 3:
+                max_per = max(zip(d2.values(), d2.keys()))[1]
+                print(f"{max_per} has the max percentage of {d2[max_per]}")
+        elif c == 3:
+            name = input("enter name of person to delete: ")
+            del d[name]
+            print("done")
+        elif c == 4:
+            name = input("enter name of person to update: ")
+            li = []
+            for i in range(5):
+                y = int(input(f"enter marks {i}: "))
+                li.append(y)
+            d[name] = li
+        elif c == 5:
+            quit()
+        else:
+            print("invalid choice")
